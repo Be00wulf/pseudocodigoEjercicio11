@@ -1,0 +1,41 @@
+Algoritmo ejercicio11
+	contadorImpares = 0
+	contadorPares = 0
+	sumaPares = 0
+	contador2docena = 0
+	valorMayor = 0
+	
+	Para i <- 1 Hasta 10 Hacer
+		numero = azar(36)
+		Mostrar numero
+		
+		si numero%2 <> 0 Entonces
+			contadorImpares = contadorImpares + 1
+		SiNo
+			si numero %2 = 0 y numero <> 0 Entonces
+				contadorPares = contadorPares + 1
+				sumaPares = sumaPares + numero
+			FinSi
+			
+			Si numero >= 13 y numero <= 24 Entonces
+				contador2docena = contador2docena + 1
+			FinSi
+			
+			//valor mayor
+			si numero >= valorMayor Entonces
+				valorMayor = numero
+				
+				
+			FinSi
+			
+		FinSi
+		
+	FinPara
+	promedioPares = (sumaPares / contadorPares)
+	
+	Mostrar "la cantidad de numeros impares es de ",contadorImpares
+	Mostrar "El promedio de los numeros pares es de ",promedioPares
+	Mostrar "El numero mayor es de ",valorMayor
+	Mostrar "Si ahora se leen números hasta que llega el valor36, habrían mas numeros imapres, mas valores a evaluar en el promedio de pares y el resultado mayor seríá 36 siempre ya que es el limite"
+	
+FinAlgoritmo
